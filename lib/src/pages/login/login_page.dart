@@ -33,17 +33,23 @@ class LoginPage extends StatelessWidget {
                 ),
                 LoginFrom(),
                 SizedBox(
-                  height: 30,
+                  height: 20,
                 ),
-                Text('forgot password'),
+                _buildTextButton(
+                  'Forgot password',
+                  onPressed: () {},
+                ),
                 SizedBox(
-                  height: 30,
+                  height: 20,
                 ),
                 SingleSingOn(),
                 SizedBox(
                   height: 30,
                 ),
-                Text('Register'),
+                _buildTextButton(
+                  'Creat Account',
+                  onPressed: () {},
+                ),
                 SizedBox(
                   height: 30,
                 )
@@ -55,9 +61,19 @@ class LoginPage extends StatelessWidget {
     );
   }
 
-  // TextButton _buildTextButton(
-  //   String text, {
-  //   VoidCallback onPressed,
-  //   double fontSize = 16,
-  // }) {}
+  TextButton _buildTextButton(
+    String text, {
+    VoidCallback? onPressed,
+    double fontSize = 16,
+  }) =>
+      TextButton(
+          onPressed: onPressed,
+          child: Text(
+            text,
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+            ),
+          ));
 }
