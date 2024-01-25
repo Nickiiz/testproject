@@ -4,8 +4,13 @@ import 'package:another_flushbar/flushbar.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:learn_flutter_fullstack/src/config/route.dart';
 import 'package:learn_flutter_fullstack/src/config/theme.dart' as custom_them;
+import 'package:learn_flutter_fullstack/src/config/route.dart' as custom_route;
+import 'package:learn_flutter_fullstack/src/constants/setting.dart';
+
 import 'package:learn_flutter_fullstack/src/utils/RegexValidator.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class LoginFrom extends StatefulWidget {
   const LoginFrom({super.key});
@@ -158,10 +163,23 @@ class _LoginFromState extends State<LoginFrom> {
     }
     if (_errorUsername == null && _errorPassword == null) {
       showLoading();
-      Future.delayed(Duration(seconds: 2)).then((value) {
+      Future.delayed(Duration(seconds: 2)).then((value) async {
         Navigator.pop(context);
         if (username == 'nick.555@gmail.com' && password == '12345678') {
-          print('login true');
+          // Navigator.pushReplacement(
+          //   context,
+          //   MaterialPageRoute(
+          //     builder: (context) => HomePage(),
+          //   ),
+          // );
+
+          SharedPreferences prefs = await SharedPreferences.getInstance();
+          // prefs.setString(Setting.TOKEN_PREF, 'xxxx');
+          // prefs.setString(Setting.USERNAME_PREF, username);
+
+          print(prefs);
+
+          Navigator.pushReplacementNamed(context, custom_route.Route.home);
         } else {
           showAlertBar();
           setState(() {});
