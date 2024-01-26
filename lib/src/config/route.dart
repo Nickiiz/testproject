@@ -8,7 +8,7 @@ import 'package:learn_flutter_fullstack/src/pages/setting/setting_page.dart';
 class Route {
   static const home = '/home';
   static const login = '/login';
-  static const dashboard = '/dashboard';
+  static const activity = '/activity';
   static const profile = '/profile';
   static const inbox = '/inbox';
   static const setting = '/setting';
@@ -18,7 +18,7 @@ class Route {
   static final Map<String, WidgetBuilder> _route = {
     home: (context) => HomePage(),
     login: (context) => LoginPage(),
-    dashboard: (context) => DashBoardPage(),
+    activity: (context) => ActivityPage(),
     profile: (context) => ProfilePage(),
     inbox: (context) => InboxPage(),
     setting: (context) => SettingPage(),

@@ -8,6 +8,7 @@ import 'package:learn_flutter_fullstack/src/config/route.dart' as custom_route;
 import 'package:learn_flutter_fullstack/src/viewmodels/splash_screen_ui.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+//แล้วไงต่อ
 class App extends StatelessWidget {
   const App({super.key});
 
@@ -16,7 +17,7 @@ class App extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: custom_route.Route.getall(),
-      title: 'MyStock',
+      title: 'MyEmployee',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class DashBoardPage extends StatelessWidget {
-  const DashBoardPage({super.key});
+class ActivityPage extends StatelessWidget {
+  const ActivityPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Dashboard'),
+        title: Text('Activity'),
       ),
       body: Center(
         child: FlutterLogo(

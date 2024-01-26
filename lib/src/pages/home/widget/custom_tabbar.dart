@@ -31,22 +31,6 @@ class CustomTabBar extends StatelessWidget implements PreferredSizeWidget {
             ),
           )
           .toList(),
-      // tabs: tabsMenu.map(
-      //   (item) => Tab(
-      //     child: Row(
-      //       children: [
-      //         FaIcon(item.icon),
-      //         SizedBox(
-      //           width: 12,
-      //         ),
-      //         Text(
-      //           item.title,
-      //           style: TextStyle(fontSize: 18, color: Colors.white),
-      //         ),
-      //       ],
-      //     ),
-      //   ),
-      //),
     );
   }
 

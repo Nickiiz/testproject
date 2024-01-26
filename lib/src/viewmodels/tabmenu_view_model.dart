@@ -2,9 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:learn_flutter_fullstack/src/pages/home/widget/chart.dart';
+import 'package:learn_flutter_fullstack/src/pages/home/widget/calendar.dart';
 import 'package:learn_flutter_fullstack/src/pages/home/widget/cloudmate.dart';
-import 'package:learn_flutter_fullstack/src/pages/home/widget/report.dart';
+import 'package:learn_flutter_fullstack/src/pages/home/widget/leave.dart';
 
 class TabMenu {
   final String title;
@@ -27,12 +27,12 @@ class TabMenuViewMoodel {
         ),
         TabMenu(
           'Calendar',
-          Chart(),
-          icon: FontAwesomeIcons.chartArea,
+          Calendar(),
+          icon: FontAwesomeIcons.calendarCheck,
         ),
         TabMenu(
-          'Report',
-          Report(),
+          'Leave',
+          Leave(),
           icon: FontAwesomeIcons.fileAlt,
         ),
       ];

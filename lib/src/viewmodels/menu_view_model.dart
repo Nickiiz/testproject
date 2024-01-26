@@ -27,11 +27,11 @@ class MenuViewModel {
           },
         ),
         Menu(
-          'DashBoard',
+          'Activity',
           icon: FontAwesomeIcons.chartPie,
           iconColor: Colors.blue,
           onTap: (context) {
-            Navigator.pushNamed(context, custom_route.Route.dashboard);
+            Navigator.pushNamed(context, custom_route.Route.activity);
           },
         ),
         Menu(

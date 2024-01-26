@@ -11,8 +11,7 @@ class InboxPage extends StatelessWidget {
       ),
       body: Center(
         child: FlutterLogo(
-          size: 400,
-          // curve: Curves.linear,
+          size: 150,
         ),
       ),
     );
