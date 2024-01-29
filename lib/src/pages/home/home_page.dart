@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:learn_flutter_fullstack/src/constants/assest.dart';
 import 'package:learn_flutter_fullstack/src/pages/home/widget/calendar.dart';
+import 'package:learn_flutter_fullstack/src/pages/home/widget/checkinout.dart';
 import 'package:learn_flutter_fullstack/src/pages/home/widget/cloudmate.dart';
 import 'package:learn_flutter_fullstack/src/pages/home/widget/custom_drawer.dart';
 import 'package:learn_flutter_fullstack/src/pages/home/widget/custom_tabbar.dart';
@@ -35,14 +36,15 @@ class _HomePageState extends State<HomePage> {
     */
 
     return DefaultTabController(
-      length: 3,
+      length: 4,
       child: Scaffold(
         appBar: _buildAppBar(),
         drawer: CustomDrawer(),
         body: TabBarView(
           children: [
             CloudMate(),
-            Calendar(), //ลำบากมาก ใช้คีย์บอร์ดร่วมไม่ได้ Ctrl+v, c ไม่ได้เลย
+            CheckInCheckOut(),
+            CalendarScreen(),
             Leave(),
           ],
         ),
@@ -62,12 +64,16 @@ class _HomePageState extends State<HomePage> {
                 icon: Icon(FontAwesomeIcons.box),
               ),
               Tab(
+                text: 'CheckIn',
+                icon: Icon(FontAwesomeIcons.userCheck),
+              ),
+              Tab(
                 text: 'Calendar',
                 icon: Icon(FontAwesomeIcons.calendarCheck),
               ),
               Tab(
                 text: 'Leave',
-                icon: Icon(FontAwesomeIcons.fileArrowDown),
+                icon: Icon(FontAwesomeIcons.personWalking),
               ),
             ],
           ),

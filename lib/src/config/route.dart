@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learn_flutter_fullstack/src/pages/home/mangement/widgets/management_page.dart';
 import 'package:learn_flutter_fullstack/src/pages/inbox/inbox_page.dart';
 
 import 'package:learn_flutter_fullstack/src/pages/pages.dart';
@@ -12,6 +13,7 @@ class Route {
   static const profile = '/profile';
   static const inbox = '/inbox';
   static const setting = '/setting';
+  static const management = '/management';
 
   static Map<String, WidgetBuilder> getall() => _route;
 
@@ -22,5 +24,6 @@ class Route {
     profile: (context) => ProfilePage(),
     inbox: (context) => InboxPage(),
     setting: (context) => SettingPage(),
+    management: (context) => ManagementPage(),
   };
 }

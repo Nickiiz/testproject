@@ -27,11 +27,16 @@ class TabMenuViewMoodel {
         ),
         TabMenu(
           'Calendar',
-          Calendar(),
+          CalendarScreen(),
           icon: FontAwesomeIcons.calendarCheck,
         ),
         TabMenu(
           'Leave',
+          Leave(),
+          icon: FontAwesomeIcons.fileAlt,
+        ),
+        TabMenu(
+          'CheckIn_Out',
           Leave(),
           icon: FontAwesomeIcons.fileAlt,
         ),
